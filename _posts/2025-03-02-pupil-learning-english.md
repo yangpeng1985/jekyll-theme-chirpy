@@ -1,6 +1,8 @@
 ---
 title: 小学生学英语
-layout: post
+date: 2025-03-02 20:30:00 +0800
+categories: [blog, 英语]
+tags: [english]     # TAG names should always be lowercase
 ---
 
 ## 26个英文字母本身的发音

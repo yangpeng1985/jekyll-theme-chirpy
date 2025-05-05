@@ -1,27 +1,13 @@
 ---
 title: 使用pyenv配合virutalenv安装和管理多个python版本
-layout: post
+date: 2024-03-02 20:30:00 +0800
+categories: [blog, 技术]
+tags: [python, pyenv]     # TAG names should always be lowercase
 ---
 
 注： 这是一篇老文章，写于2019年12月29日
 
-<div class="ez-toc-v2_0_66_1 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction" id="ez-toc-container"><div class="ez-toc-title-container">目录
-
-<span class="ez-toc-title-toggle">[<span class="ez-toc-js-icon-con"><span class=""><span class="eztoc-hide" style="display:none;">Toggle</span><span class="ez-toc-icon-toggle-span"><svg class="list-377408" fill="none" height="20px" style="fill: #999;color:#999" viewbox="0 0 24 24" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z" fill="currentColor"></path></svg><svg baseprofile="tiny" class="arrow-unsorted-368013" height="10px" style="fill: #999;color:#999" version="1.2" viewbox="0 0 24 24" width="10px" xmlns="http://www.w3.org/2000/svg"><path d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z"></path></svg></span></span></span>](#)</span></div><nav>- [Best way to run python 3.7 on Ubuntu 16.04 which comes with python 3.5](http://thinknotes.cn/2024/03/02/install-pyenv-in-ubuntu/#Best_way_to_run_python_37_on_Ubuntu_1604_which_comes_with_python_35 "Best way to run python 3.7 on Ubuntu 16.04 which comes with python 3.5")
-- [ubuntu 16.04上安装配置pyenv](http://thinknotes.cn/2024/03/02/install-pyenv-in-ubuntu/#ubuntu_1604%E4%B8%8A%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEpyenv "ubuntu 16.04上安装配置pyenv")
-  - [准备工作：](http://thinknotes.cn/2024/03/02/install-pyenv-in-ubuntu/#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C%EF%BC%9A "准备工作：")
-  - [开始安装配置：](http://thinknotes.cn/2024/03/02/install-pyenv-in-ubuntu/#%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%EF%BC%9A "开始安装配置：")
-- [pyenv 结合 virtualenv 创建虚拟环境](http://thinknotes.cn/2024/03/02/install-pyenv-in-ubuntu/#pyenv_%E7%BB%93%E5%90%88_virtualenv_%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83 "pyenv 结合 virtualenv 创建虚拟环境")
-- [pyenv 常用的命令说明](http://thinknotes.cn/2024/03/02/install-pyenv-in-ubuntu/#pyenv_%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4%E8%AF%B4%E6%98%8E "pyenv 常用的命令说明")
-  - [python 配置](http://thinknotes.cn/2024/03/02/install-pyenv-in-ubuntu/#python_%E9%85%8D%E7%BD%AE "python 配置")
-  - [python 切换](http://thinknotes.cn/2024/03/02/install-pyenv-in-ubuntu/#python_%E5%88%87%E6%8D%A2 "python 切换")
-  - [python 优先级](http://thinknotes.cn/2024/03/02/install-pyenv-in-ubuntu/#python_%E4%BC%98%E5%85%88%E7%BA%A7 "python 优先级")
-  - [pyenv 插件: pyenv-virtualenv](http://thinknotes.cn/2024/03/02/install-pyenv-in-ubuntu/#pyenv_%E6%8F%92%E4%BB%B6_pyenv-virtualenv "pyenv 插件: pyenv-virtualenv")
-- [参考：](http://thinknotes.cn/2024/03/02/install-pyenv-in-ubuntu/#%E5%8F%82%E8%80%83%EF%BC%9A "参考：")
-- [pyenv安装太慢？使用国内镜像解决](http://thinknotes.cn/2024/03/02/install-pyenv-in-ubuntu/#pyenv%E5%AE%89%E8%A3%85%E5%A4%AA%E6%85%A2%EF%BC%9F%E4%BD%BF%E7%94%A8%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E8%A7%A3%E5%86%B3 "pyenv安装太慢？使用国内镜像解决")
-  - [备忘: 因为没有提前安装必要的依赖包出现的报错](http://thinknotes.cn/2024/03/02/install-pyenv-in-ubuntu/#%E5%A4%87%E5%BF%98_%E5%9B%A0%E4%B8%BA%E6%B2%A1%E6%9C%89%E6%8F%90%E5%89%8D%E5%AE%89%E8%A3%85%E5%BF%85%E8%A6%81%E7%9A%84%E4%BE%9D%E8%B5%96%E5%8C%85%E5%87%BA%E7%8E%B0%E7%9A%84%E6%8A%A5%E9%94%99 "备忘: 因为没有提前安装必要的依赖包出现的报错")
-
-</nav></div>## <span class="ez-toc-section" id="Best_way_to_run_python_37_on_Ubuntu_1604_which_comes_with_python_35"></span>Best way to run python 3.7 on Ubuntu 16.04 which comes with python 3.5<span class="ez-toc-section-end"></span>
+## <span class="ez-toc-section" id="Best_way_to_run_python_37_on_Ubuntu_1604_which_comes_with_python_35"></span>Best way to run python 3.7 on Ubuntu 16.04 which comes with python 3.5<span class="ez-toc-section-end"></span>
 
 > I would not recommend manually fiddling around with source code installations and paths. Use pyenv and save yourself the trouble.
 > 

@@ -1,6 +1,8 @@
 ---
 title: git中如何修改commit
-layout: post
+date: 2025-04-12 20:30:00 +0800
+categories: [blog, 技术]
+tags: [git]     # TAG names should always be lowercase
 ---
 
 # 修改最新提交

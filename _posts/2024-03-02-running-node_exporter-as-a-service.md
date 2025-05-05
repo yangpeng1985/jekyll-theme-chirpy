@@ -1,19 +1,13 @@
 ---
-title: 'Linux系统下注册node exporter为systemd服务'
-layout: post
+title: Linux系统下注册node exporter为systemd服务
+date: 2024-03-02 20:30:00 +0800
+categories: [blog, 技术]
+tags: [systemd, linux]     # TAG names should always be lowercase
 ---
 
 注：这是一篇老文章，写于2018年5月31日。
 
-<div class="ez-toc-v2_0_66_1 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction" id="ez-toc-container"><div class="ez-toc-title-container">目录
-
-<span class="ez-toc-title-toggle">[<span class="ez-toc-js-icon-con"><span class=""><span class="eztoc-hide" style="display:none;">Toggle</span><span class="ez-toc-icon-toggle-span"><svg class="list-377408" fill="none" height="20px" style="fill: #999;color:#999" viewbox="0 0 24 24" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z" fill="currentColor"></path></svg><svg baseprofile="tiny" class="arrow-unsorted-368013" height="10px" style="fill: #999;color:#999" version="1.2" viewbox="0 0 24 24" width="10px" xmlns="http://www.w3.org/2000/svg"><path d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z"></path></svg></span></span></span>](#)</span></div><nav>- [add user prometheus](http://thinknotes.cn/2024/03/02/running-node_exporter-as-a-service/#add_user_prometheus "add user prometheus")
-- [Running Node Exporter as a Service](http://thinknotes.cn/2024/03/02/running-node_exporter-as-a-service/#Running_Node_Exporter_as_a_Service "Running Node Exporter as a Service")
-- [批量注册Node Exporter为系统服务](http://thinknotes.cn/2024/03/02/running-node_exporter-as-a-service/#%E6%89%B9%E9%87%8F%E6%B3%A8%E5%86%8CNode_Exporter%E4%B8%BA%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1 "批量注册Node Exporter为系统服务")
-- [使用python脚本进行批量注册操作(需要在root下执行）](http://thinknotes.cn/2024/03/02/running-node_exporter-as-a-service/#%E4%BD%BF%E7%94%A8python%E8%84%9A%E6%9C%AC%E8%BF%9B%E8%A1%8C%E6%89%B9%E9%87%8F%E6%B3%A8%E5%86%8C%E6%93%8D%E4%BD%9C%E9%9C%80%E8%A6%81%E5%9C%A8root%E4%B8%8B%E6%89%A7%E8%A1%8C%EF%BC%89 "使用python脚本进行批量注册操作(需要在root下执行）")
-- [备忘](http://thinknotes.cn/2024/03/02/running-node_exporter-as-a-service/#%E5%A4%87%E5%BF%98 "备忘")
-
-</nav></div>## <span class="ez-toc-section" id="add_user_prometheus"></span>add user prometheus<span class="ez-toc-section-end"></span>
+## <span class="ez-toc-section" id="add_user_prometheus"></span>add user prometheus<span class="ez-toc-section-end"></span>
 
 1. 在root下执行以下命令，添加新用户prometheus  
   useradd prometheus  

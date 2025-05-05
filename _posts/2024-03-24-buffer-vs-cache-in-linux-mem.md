@@ -1,6 +1,8 @@
 ---
 title: 通过free命令查看内存时，看到的buffer和cache各表示什么含义？
-layout: post
+date: 2024-03-24 20:30:00 +0800
+categories: [blog, 技术]
+tags: [linux]     # TAG names should always be lowercase
 ---
 
 free命令显示了系统的可用和已用的物理内存及交换内存的总量，以及内核用到的缓存空间。这些信息是从 /proc/meminfo 中得到的

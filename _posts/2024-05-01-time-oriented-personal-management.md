@@ -1,7 +1,10 @@
 ---
 title: 面向时间的“个人的自我管理”
-layout: post
+date: 2024-05-01 20:30:00 +0800
+categories: [blog, 时间管理]
+tags: [time, life, manager]     # TAG names should always be lowercase
 ---
+
 
 <div class="ez-toc-v2_0_66_1 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction" id="ez-toc-container"><div class="ez-toc-title-container">目录
 

@@ -1,3 +1,10 @@
+---
+title: 在MacBook Pro 上安装minikube
+date: 2020-08-05 20:30:00 +0800
+categories: [blog, 技术]
+tags: [minikube, mac]     # TAG names should always be lowercase
+---
+
 # 在MacBook Pro 上安装minikube
 
 根据官方文档操作。

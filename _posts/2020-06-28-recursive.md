@@ -1,3 +1,10 @@
+---
+title: 递归
+date: 2020-06-28 20:30:00 +0800
+categories: [blog, 技术]
+tags: [python]     # TAG names should always be lowercase
+---
+
 ```python
 def factorial(x):
   if x == 1:

@@ -1,6 +1,8 @@
 ---
 title: grep的高级用法
-layout: post
+date: 2024-03-02 20:30:00 +0800
+categories: [blog, 技术]
+tags: [grep, linux]     # TAG names should always be lowercase
 ---
 
 注：这是一篇老文章，写于2019年8月25日

@@ -1,3 +1,10 @@
+---
+title: k8s的核心概念
+date: 2020-08-09 20:30:00 +0800
+categories: [blog, 技术]
+tags: [k8s]     # TAG names should always be lowercase
+---
+
 # k8s的核心概念
 
 [K8S集群架构图](https://d33wubrfki0l68.cloudfront.net/7016517375d10c702489167e704dcb99e570df85/7bb53/images/docs/components-of-kubernetes.png)

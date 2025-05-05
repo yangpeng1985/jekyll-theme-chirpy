@@ -1,7 +1,10 @@
 ---
 title: 系统负载
-layout: post
+date: 2024-03-02 20:30:00 +0800
+categories: [blog, 技术]
+tags: [load, linux]     # TAG names should always be lowercase
 ---
+
 
 注：这是一篇老文章，写于2018年6月6日
 

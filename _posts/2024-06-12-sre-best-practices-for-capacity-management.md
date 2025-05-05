@@ -1,59 +1,15 @@
 ---
-title: 'SRE 容量管理的最佳实践'
-layout: post
+title: SRE 容量管理的最佳实践
+date: 2024-06-12 20:30:00 +0800
+categories: [blog, SRE]
+tags: [sre]     # TAG names should always be lowercase
 ---
 
 本文内容从 [https://static.googleusercontent.com/media/sre.google/zh-CN//static/pdf/login\_winter20\_10\_torres.pdf](https://static.googleusercontent.com/media/sre.google/zh-CN//static/pdf/login_winter20_10_torres.pdf) 翻译而来，建议阅读原文。
 
 作为SRE，你负责确定服务的初始资源需求，并确保服务在面临意外需求时也能合理运行。容量管理是确保你拥有适当数量的资源，以使你的服务具有可扩展性、高效性和可靠性的过程。面向用户和公司内部的服务必须能够应对预期和意外的增长。我们将利用率定义为正在使用的资源的百分比。确定初始资源利用率并预测未来需求是困难的。我们提供估算利用率和识别盲点的方法，并讨论构建冗余以避免故障的好处。你将使用这些信息来设计你的架构，以便通过增加每个服务组件的资源分配，能够有效地线性增加整个服务的容量。
 
-<div class="ez-toc-v2_0_66_1 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction" id="ez-toc-container"><div class="ez-toc-title-container">目录
-
-<span class="ez-toc-title-toggle">[<span class="ez-toc-js-icon-con"><span class=""><span class="eztoc-hide" style="display:none;">Toggle</span><span class="ez-toc-icon-toggle-span"><svg class="list-377408" fill="none" height="20px" style="fill: #999;color:#999" viewbox="0 0 24 24" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z" fill="currentColor"></path></svg><svg baseprofile="tiny" class="arrow-unsorted-368013" height="10px" style="fill: #999;color:#999" version="1.2" viewbox="0 0 24 24" width="10px" xmlns="http://www.w3.org/2000/svg"><path d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z"></path></svg></span></span></span>](#)</span></div><nav>- [容量管理原则](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E5%AE%B9%E9%87%8F%E7%AE%A1%E7%90%86%E5%8E%9F%E5%88%99 "容量管理原则")
-- [容量管理的复杂性](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E5%AE%B9%E9%87%8F%E7%AE%A1%E7%90%86%E7%9A%84%E5%A4%8D%E6%9D%82%E6%80%A7 "容量管理的复杂性")
-- [资源供应](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E8%B5%84%E6%BA%90%E4%BE%9B%E5%BA%94 "资源供应")
-- [资源短缺的影响](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E8%B5%84%E6%BA%90%E7%9F%AD%E7%BC%BA%E7%9A%84%E5%BD%B1%E5%93%8D "资源短缺的影响")
-  - [估算利用率](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E4%BC%B0%E7%AE%97%E5%88%A9%E7%94%A8%E7%8E%87 "估算利用率")
-      - [峰值使用率](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E5%B3%B0%E5%80%BC%E4%BD%BF%E7%94%A8%E7%8E%87 "峰值使用率")
-      - [最高峰值利用率](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E6%9C%80%E9%AB%98%E5%B3%B0%E5%80%BC%E5%88%A9%E7%94%A8%E7%8E%87 "最高峰值利用率")
-- [冗余](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E5%86%97%E4%BD%99 "冗余")
-  - [区域内的冗余](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E5%8C%BA%E5%9F%9F%E5%86%85%E7%9A%84%E5%86%97%E4%BD%99 "区域内的冗余")
-  - [跨区域的冗余](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E8%B7%A8%E5%8C%BA%E5%9F%9F%E7%9A%84%E5%86%97%E4%BD%99 "跨区域的冗余")
-  - [冗余的成本](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E5%86%97%E4%BD%99%E7%9A%84%E6%88%90%E6%9C%AC "冗余的成本")
-      - [Figure 2: Example comparison of the cost of resource provisioning a service with three and five replicas](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#Figure_2_Example_comparison_of_the_cost_of_resource_provisioning_a_service_with_three_and_five_replicas "Figure 2: Example comparison of the cost of resource provisioning a service with three and five replicas")
-  - [同质和异质服务](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E5%90%8C%E8%B4%A8%E5%92%8C%E5%BC%82%E8%B4%A8%E6%9C%8D%E5%8A%A1 "同质和异质服务")
-  - [复制和分布式流量](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E5%A4%8D%E5%88%B6%E5%92%8C%E5%88%86%E5%B8%83%E5%BC%8F%E6%B5%81%E9%87%8F "复制和分布式流量")
-  - [Latency-Insensitive Processes](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#Latency-Insensitive_Processes "Latency-Insensitive Processes")
-  - [Additional Resources for the Unknown](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#Additional_Resources_for_the_Unknown "Additional Resources for the Unknown")
-- [Capacity Planning](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#Capacity_Planning "Capacity Planning")
-  - [Overview of Capacity Planning](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#Overview_of_Capacity_Planning "Overview of Capacity Planning")
-  - [资源预测](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E8%B5%84%E6%BA%90%E9%A2%84%E6%B5%8B "资源预测")
-      - [组件的资源类别](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E7%BB%84%E4%BB%B6%E7%9A%84%E8%B5%84%E6%BA%90%E7%B1%BB%E5%88%AB "组件的资源类别")
-      - [多个区域](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E5%A4%9A%E4%B8%AA%E5%8C%BA%E5%9F%9F "多个区域")
-      - [服务需求](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E6%9C%8D%E5%8A%A1%E9%9C%80%E6%B1%82 "服务需求")
-      - [Growth](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#Growth "Growth")
-  - [预测示例](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E9%A2%84%E6%B5%8B%E7%A4%BA%E4%BE%8B "预测示例")
-      - [一个两个组件服务的资源类别](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E4%B8%80%E4%B8%AA%E4%B8%A4%E4%B8%AA%E7%BB%84%E4%BB%B6%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%B5%84%E6%BA%90%E7%B1%BB%E5%88%AB "一个两个组件服务的资源类别")
-      - [影响你服务的趋势](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E5%BD%B1%E5%93%8D%E4%BD%A0%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%B6%8B%E5%8A%BF "影响你服务的趋势")
-- [Best Practices](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#Best_Practices "Best Practices")
-  - [负载测试](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E8%B4%9F%E8%BD%BD%E6%B5%8B%E8%AF%95 "负载测试")
-  - [全面评估容量](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E5%85%A8%E9%9D%A2%E8%AF%84%E4%BC%B0%E5%AE%B9%E9%87%8F "全面评估容量")
-  - [减少停机的影响](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E5%87%8F%E5%B0%91%E5%81%9C%E6%9C%BA%E7%9A%84%E5%BD%B1%E5%93%8D "减少停机的影响")
-  - [配额管理和限流](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86%E5%92%8C%E9%99%90%E6%B5%81 "配额管理和限流")
-  - [监控](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E7%9B%91%E6%8E%A7 "监控")
-      - [负载指标](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E8%B4%9F%E8%BD%BD%E6%8C%87%E6%A0%87 "负载指标")
-      - [资源指标](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E8%B5%84%E6%BA%90%E6%8C%87%E6%A0%87 "资源指标")
-      - [性能指标](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87 "性能指标")
-      - [高级健康指标（可以帮助过滤其他受污染的指标数据）](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E9%AB%98%E7%BA%A7%E5%81%A5%E5%BA%B7%E6%8C%87%E6%A0%87%EF%BC%88%E5%8F%AF%E4%BB%A5%E5%B8%AE%E5%8A%A9%E8%BF%87%E6%BB%A4%E5%85%B6%E4%BB%96%E5%8F%97%E6%B1%A1%E6%9F%93%E7%9A%84%E6%8C%87%E6%A0%87%E6%95%B0%E6%8D%AE%EF%BC%89 "高级健康指标（可以帮助过滤其他受污染的指标数据）")
-  - [报警](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E6%8A%A5%E8%AD%A6 "报警")
-  - [资源池](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E8%B5%84%E6%BA%90%E6%B1%A0 "资源池")
-- [常规SRE最佳实践](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E5%B8%B8%E8%A7%84SRE%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5 "常规SRE最佳实践")
-- [评估服务的容量](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E8%AF%84%E4%BC%B0%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%AE%B9%E9%87%8F "评估服务的容量")
-- [总结](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#%E6%80%BB%E7%BB%93 "总结")
-- [Acknowledgments](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#Acknowledgments "Acknowledgments")
-- [References](http://thinknotes.cn/2024/06/12/sre-best-practices-for-capacity-management/#References "References")
-
-</nav></div>## <span class="ez-toc-section" id="%E5%AE%B9%E9%87%8F%E7%AE%A1%E7%90%86%E5%8E%9F%E5%88%99"></span>容量管理原则<span class="ez-toc-section-end"></span>
+## <span class="ez-toc-section" id="%E5%AE%B9%E9%87%8F%E7%AE%A1%E7%90%86%E5%8E%9F%E5%88%99"></span>容量管理原则<span class="ez-toc-section-end"></span>
 
 在本文的上下文中，服务被定义为提供一组功能的所有二进制文件（服务堆栈）的集合。
 

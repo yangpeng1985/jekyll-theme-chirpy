@@ -1,6 +1,8 @@
 ---
 title: 什么是时间
-layout: post
+date: 2024-06-16 20:30:00 +0800
+categories: [blog, 时间管理]
+tags: [time, life, manager]     # TAG names should always be lowercase
 ---
 
 # <span class="ez-toc-section" id="%E4%BB%80%E4%B9%88%E6%98%AF%E6%97%B6%E9%97%B4"></span>什么是时间<span class="ez-toc-section-end"></span>

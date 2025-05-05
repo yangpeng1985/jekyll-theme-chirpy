@@ -1,7 +1,10 @@
 ---
 title: linux面试题
-layout: page
+date: 2025-05-04 20:30:00 +0800
+categories: [blog, 技术]
+tags: [linux]     # TAG names should always be lowercase
 ---
+
 
 
 

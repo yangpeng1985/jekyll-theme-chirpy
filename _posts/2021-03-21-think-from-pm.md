@@ -1,6 +1,8 @@
 ---
-layout: post
 title: 6个月项目管理经验及感想
+date: 2021-03-21 20:30:00 +0800
+categories: [blog, 总结]
+tags: [manager]     # TAG names should always be lowercase
 ---
 
 2020年10月到2021年3月的6个月时间，或者从2020年6月开始，也就是10个月的时间，我的角色从一个软件工程师到项目开发的PM，这个角色的转换时逐渐的，从无意识到有意识，从无任命到明确化。

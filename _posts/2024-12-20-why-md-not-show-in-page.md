@@ -1,6 +1,8 @@
 ---
-layout: post
 title: md文件在GitHub page页面不显示的原因
+date: 2024-12-20 20:30:00 +0800
+categories: [blog, 站点]
+tags: [site]     # TAG names should always be lowercase
 ---
 
 >You can add additional posts in the browser on GitHub.com too!

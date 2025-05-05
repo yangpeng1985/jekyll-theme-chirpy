@@ -1,3 +1,10 @@
+---
+title: Python的异常机制
+date: 2020-11-01 20:30:00 +0800
+categories: [blog, 技术]
+tags: [python, exception]     # TAG names should always be lowercase
+---
+
 # Python的异常机制
 
 ## 捕获异常

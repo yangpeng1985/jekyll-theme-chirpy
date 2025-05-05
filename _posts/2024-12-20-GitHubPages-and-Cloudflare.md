@@ -1,6 +1,8 @@
 ---
-layout: post
 title: 使用Cloudflare和GitHub Pages托管个人博客
+date: 2024-12-20 20:30:00 +0800
+categories: [blog, 站点]
+tags: [cloudflare, github]     # TAG names should always be lowercase
 ---
 
 # GitHub Pages 部分

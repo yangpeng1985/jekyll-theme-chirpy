@@ -1,6 +1,8 @@
 ---
 title: 优先队列
-layout: post
+date: 2024-03-23 20:30:00 +0800
+categories: [blog, 技术]
+tags: [queue, python]     # TAG names should always be lowercase
 ---
 
 最近刷题，碰到好几个问题都需要使用优先队列解决。

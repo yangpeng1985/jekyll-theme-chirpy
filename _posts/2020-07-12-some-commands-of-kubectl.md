@@ -1,3 +1,10 @@
+---
+title: kubectl的几条命令
+date: 2020-07-12 20:30:00 +0800
+categories: [blog, 技术]
+tags: [kubectl, k8s]     # TAG names should always be lowercase
+---
+
 kubectl的几条命令
 
 ```shell

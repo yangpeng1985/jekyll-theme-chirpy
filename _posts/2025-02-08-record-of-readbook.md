@@ -1,6 +1,8 @@
 ---
 title: 读书笔记-《张一鸣管理日志》
-layout: post
+date: 2025-02-08 20:30:00 +0800
+categories: [blog, 读书笔记]
+tags: [book]     # TAG names should always be lowercase
 ---
 
 > 常言道：以大多数人努力程度之低根本轮不到拼天赋。我的版本：以大多数人满足感延迟程度之低根本轮不到拼天赋。

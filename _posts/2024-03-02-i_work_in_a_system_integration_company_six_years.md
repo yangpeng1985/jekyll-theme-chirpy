@@ -1,6 +1,8 @@
 ---
 title: 我在系统集成公司干了六年
-layout: post
+date: 2024-03-02 20:30:00 +0800
+categories: [blog, 总结]
+tags: [linux]     # TAG names should always be lowercase
 ---
 
 注： 这是一篇老文章，写于2019年8月25日
@@ -21,19 +23,7 @@ layout: post
 
 机房搬迁、凌晨割接设备、接到系统故障告警坐车去现场处理问题、随身的双肩包里长期准备着光功和其他社保随时准备出差，这一切的经历造就了今天的我。
 
-<div class="ez-toc-v2_0_66_1 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction" id="ez-toc-container"><div class="ez-toc-title-container">目录
-
-<span class="ez-toc-title-toggle">[<span class="ez-toc-js-icon-con"><span class=""><span class="eztoc-hide" style="display:none;">Toggle</span><span class="ez-toc-icon-toggle-span"><svg class="list-377408" fill="none" height="20px" style="fill: #999;color:#999" viewbox="0 0 24 24" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z" fill="currentColor"></path></svg><svg baseprofile="tiny" class="arrow-unsorted-368013" height="10px" style="fill: #999;color:#999" version="1.2" viewbox="0 0 24 24" width="10px" xmlns="http://www.w3.org/2000/svg"><path d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z"></path></svg></span></span></span>](#)</span></div><nav>- [技术上的成长](http://thinknotes.cn/2024/03/02/i_work_in_a_system_integration_company_six_years/#%E6%8A%80%E6%9C%AF%E4%B8%8A%E7%9A%84%E6%88%90%E9%95%BF "技术上的成长")
-  - [硬件方面](http://thinknotes.cn/2024/03/02/i_work_in_a_system_integration_company_six_years/#%E7%A1%AC%E4%BB%B6%E6%96%B9%E9%9D%A2 "硬件方面")
-  - [操作系统方面](http://thinknotes.cn/2024/03/02/i_work_in_a_system_integration_company_six_years/#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%96%B9%E9%9D%A2 "操作系统方面")
-  - [数据库方面](http://thinknotes.cn/2024/03/02/i_work_in_a_system_integration_company_six_years/#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%B9%E9%9D%A2 "数据库方面")
-  - [大数据方面](http://thinknotes.cn/2024/03/02/i_work_in_a_system_integration_company_six_years/#%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%96%B9%E9%9D%A2 "大数据方面")
-  - [网络方面](http://thinknotes.cn/2024/03/02/i_work_in_a_system_integration_company_six_years/#%E7%BD%91%E7%BB%9C%E6%96%B9%E9%9D%A2 "网络方面")
-  - [其他方面](http://thinknotes.cn/2024/03/02/i_work_in_a_system_integration_company_six_years/#%E5%85%B6%E4%BB%96%E6%96%B9%E9%9D%A2 "其他方面")
-- [软技能方面](http://thinknotes.cn/2024/03/02/i_work_in_a_system_integration_company_six_years/#%E8%BD%AF%E6%8A%80%E8%83%BD%E6%96%B9%E9%9D%A2 "软技能方面")
-- [离开的原因](http://thinknotes.cn/2024/03/02/i_work_in_a_system_integration_company_six_years/#%E7%A6%BB%E5%BC%80%E7%9A%84%E5%8E%9F%E5%9B%A0 "离开的原因")
-
-</nav></div>## <span class="ez-toc-section" id="%E6%8A%80%E6%9C%AF%E4%B8%8A%E7%9A%84%E6%88%90%E9%95%BF"></span>技术上的成长<span class="ez-toc-section-end"></span>
+## <span class="ez-toc-section" id="%E6%8A%80%E6%9C%AF%E4%B8%8A%E7%9A%84%E6%88%90%E9%95%BF"></span>技术上的成长<span class="ez-toc-section-end"></span>
 
 工作内容从收货、机房机柜的固定（有时候甚至要上托盘）、服务器等硬件上架、做网线、装操作系统、部署业务系统、维护业务系统都会涉及。期间断断续续学习了Python，掌握了Python的基础。
 
