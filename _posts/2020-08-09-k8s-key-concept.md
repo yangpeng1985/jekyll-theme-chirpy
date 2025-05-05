@@ -1,7 +1,5 @@
 # k8s的核心概念
 
-<img src="/Users/yangpeng/Downloads/components-of-kubernetes.png" alt="K8S集群架构图" style="zoom:288%;" />
-
 [K8S集群架构图](https://d33wubrfki0l68.cloudfront.net/7016517375d10c702489167e704dcb99e570df85/7bb53/images/docs/components-of-kubernetes.png)
 
 ## Control Plane Componet

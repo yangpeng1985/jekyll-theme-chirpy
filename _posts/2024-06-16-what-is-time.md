@@ -7,42 +7,7 @@ layout: post
 
 <div class="ez-toc-v2_0_66_1 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction" id="ez-toc-container"><div class="ez-toc-title-container">目录
 
-<span class="ez-toc-title-toggle">[<span class="ez-toc-js-icon-con"><span class=""><span class="eztoc-hide" style="display:none;">Toggle</span><span class="ez-toc-icon-toggle-span"><svg class="list-377408" fill="none" height="20px" style="fill: #999;color:#999" viewbox="0 0 24 24" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z" fill="currentColor"></path></svg><svg baseprofile="tiny" class="arrow-unsorted-368013" height="10px" style="fill: #999;color:#999" version="1.2" viewbox="0 0 24 24" width="10px" xmlns="http://www.w3.org/2000/svg"><path d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z"></path></svg></span></span></span>](#)</span></div><nav>- [什么是时间](http://thinknotes.cn/2024/06/16/what-is-time/#%E4%BB%80%E4%B9%88%E6%98%AF%E6%97%B6%E9%97%B4 "什么是时间")
-  - [生活在现代社会的普通人眼中的时间](http://thinknotes.cn/2024/06/16/what-is-time/#%E7%94%9F%E6%B4%BB%E5%9C%A8%E7%8E%B0%E4%BB%A3%E7%A4%BE%E4%BC%9A%E7%9A%84%E6%99%AE%E9%80%9A%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E6%97%B6%E9%97%B4 "生活在现代社会的普通人眼中的时间")
-  - [时间的起源](http://thinknotes.cn/2024/06/16/what-is-time/#%E6%97%B6%E9%97%B4%E7%9A%84%E8%B5%B7%E6%BA%90 "时间的起源")
-      - [1. 古代文明的时间测量](http://thinknotes.cn/2024/06/16/what-is-time/#1_%E5%8F%A4%E4%BB%A3%E6%96%87%E6%98%8E%E7%9A%84%E6%97%B6%E9%97%B4%E6%B5%8B%E9%87%8F "1. 古代文明的时间测量")
-      - [2. 古代天文学](http://thinknotes.cn/2024/06/16/what-is-time/#2_%E5%8F%A4%E4%BB%A3%E5%A4%A9%E6%96%87%E5%AD%A6 "2. 古代天文学")
-      - [3. 公历和儒略历](http://thinknotes.cn/2024/06/16/what-is-time/#3_%E5%85%AC%E5%8E%86%E5%92%8C%E5%84%92%E7%95%A5%E5%8E%86 "3. 公历和儒略历")
-      - [4. 机械钟](http://thinknotes.cn/2024/06/16/what-is-time/#4_%E6%9C%BA%E6%A2%B0%E9%92%9F "4. 机械钟")
-      - [5. 现代时间测量](http://thinknotes.cn/2024/06/16/what-is-time/#5_%E7%8E%B0%E4%BB%A3%E6%97%B6%E9%97%B4%E6%B5%8B%E9%87%8F "5. 现代时间测量")
-      - [6. 时间的哲学和科学探讨](http://thinknotes.cn/2024/06/16/what-is-time/#6_%E6%97%B6%E9%97%B4%E7%9A%84%E5%93%B2%E5%AD%A6%E5%92%8C%E7%A7%91%E5%AD%A6%E6%8E%A2%E8%AE%A8 "6. 时间的哲学和科学探讨")
-      - [结论](http://thinknotes.cn/2024/06/16/what-is-time/#%E7%BB%93%E8%AE%BA "结论")
-  - [时间和地球自转](http://thinknotes.cn/2024/06/16/what-is-time/#%E6%97%B6%E9%97%B4%E5%92%8C%E5%9C%B0%E7%90%83%E8%87%AA%E8%BD%AC "时间和地球自转")
-      - [1. 地球自转与日夜交替](http://thinknotes.cn/2024/06/16/what-is-time/#1_%E5%9C%B0%E7%90%83%E8%87%AA%E8%BD%AC%E4%B8%8E%E6%97%A5%E5%A4%9C%E4%BA%A4%E6%9B%BF "1. 地球自转与日夜交替")
-      - [2. 太阳时](http://thinknotes.cn/2024/06/16/what-is-time/#2_%E5%A4%AA%E9%98%B3%E6%97%B6 "2. 太阳时")
-      - [3. 恒星时](http://thinknotes.cn/2024/06/16/what-is-time/#3_%E6%81%92%E6%98%9F%E6%97%B6 "3. 恒星时")
-      - [4. 历法](http://thinknotes.cn/2024/06/16/what-is-time/#4_%E5%8E%86%E6%B3%95 "4. 历法")
-      - [5. 时区](http://thinknotes.cn/2024/06/16/what-is-time/#5_%E6%97%B6%E5%8C%BA "5. 时区")
-      - [6. 原子时与地球自转](http://thinknotes.cn/2024/06/16/what-is-time/#6_%E5%8E%9F%E5%AD%90%E6%97%B6%E4%B8%8E%E5%9C%B0%E7%90%83%E8%87%AA%E8%BD%AC "6. 原子时与地球自转")
-      - [7. 地球自转速度变化](http://thinknotes.cn/2024/06/16/what-is-time/#7_%E5%9C%B0%E7%90%83%E8%87%AA%E8%BD%AC%E9%80%9F%E5%BA%A6%E5%8F%98%E5%8C%96 "7. 地球自转速度变化")
-      - [结论](http://thinknotes.cn/2024/06/16/what-is-time/#%E7%BB%93%E8%AE%BA-2 "结论")
-  - [时间的混乱](http://thinknotes.cn/2024/06/16/what-is-time/#%E6%97%B6%E9%97%B4%E7%9A%84%E6%B7%B7%E4%B9%B1 "时间的混乱")
-  - [时区](http://thinknotes.cn/2024/06/16/what-is-time/#%E6%97%B6%E5%8C%BA "时区")
-  - [1884年的华盛顿子午线会议的会议内容](http://thinknotes.cn/2024/06/16/what-is-time/#1884%E5%B9%B4%E7%9A%84%E5%8D%8E%E7%9B%9B%E9%A1%BF%E5%AD%90%E5%8D%88%E7%BA%BF%E4%BC%9A%E8%AE%AE%E7%9A%84%E4%BC%9A%E8%AE%AE%E5%86%85%E5%AE%B9 "1884年的华盛顿子午线会议的会议内容")
-  - [格林尼治标准时间（GMT）的时间标准系统](http://thinknotes.cn/2024/06/16/what-is-time/#%E6%A0%BC%E6%9E%97%E5%B0%BC%E6%B2%BB%E6%A0%87%E5%87%86%E6%97%B6%E9%97%B4%EF%BC%88GMT%EF%BC%89%E7%9A%84%E6%97%B6%E9%97%B4%E6%A0%87%E5%87%86%E7%B3%BB%E7%BB%9F "格林尼治标准时间（GMT）的时间标准系统")
-      - [时区实例](http://thinknotes.cn/2024/06/16/what-is-time/#%E6%97%B6%E5%8C%BA%E5%AE%9E%E4%BE%8B "时区实例")
-      - [全球影响](http://thinknotes.cn/2024/06/16/what-is-time/#%E5%85%A8%E7%90%83%E5%BD%B1%E5%93%8D "全球影响")
-  - [全球时间标准系统：协调世界时 UTC](http://thinknotes.cn/2024/06/16/what-is-time/#%E5%85%A8%E7%90%83%E6%97%B6%E9%97%B4%E6%A0%87%E5%87%86%E7%B3%BB%E7%BB%9F%EF%BC%9A%E5%8D%8F%E8%B0%83%E4%B8%96%E7%95%8C%E6%97%B6_UTC "全球时间标准系统：协调世界时 UTC")
-  - [格林尼治标准时间（GMT）的时区系统为什么会被UTC时区系统替代](http://thinknotes.cn/2024/06/16/what-is-time/#%E6%A0%BC%E6%9E%97%E5%B0%BC%E6%B2%BB%E6%A0%87%E5%87%86%E6%97%B6%E9%97%B4%EF%BC%88GMT%EF%BC%89%E7%9A%84%E6%97%B6%E5%8C%BA%E7%B3%BB%E7%BB%9F%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E8%A2%ABUTC%E6%97%B6%E5%8C%BA%E7%B3%BB%E7%BB%9F%E6%9B%BF%E4%BB%A3 "格林尼治标准时间（GMT）的时区系统为什么会被UTC时区系统替代")
-  - [夏令时](http://thinknotes.cn/2024/06/16/what-is-time/#%E5%A4%8F%E4%BB%A4%E6%97%B6 "夏令时")
-      - [使用夏令时的主要国家和地区：](http://thinknotes.cn/2024/06/16/what-is-time/#%E4%BD%BF%E7%94%A8%E5%A4%8F%E4%BB%A4%E6%97%B6%E7%9A%84%E4%B8%BB%E8%A6%81%E5%9B%BD%E5%AE%B6%E5%92%8C%E5%9C%B0%E5%8C%BA%EF%BC%9A "使用夏令时的主要国家和地区：")
-      - [不使用夏令时的主要地区](http://thinknotes.cn/2024/06/16/what-is-time/#%E4%B8%8D%E4%BD%BF%E7%94%A8%E5%A4%8F%E4%BB%A4%E6%97%B6%E7%9A%84%E4%B8%BB%E8%A6%81%E5%9C%B0%E5%8C%BA "不使用夏令时的主要地区")
-      - [重要性](http://thinknotes.cn/2024/06/16/what-is-time/#%E9%87%8D%E8%A6%81%E6%80%A7 "重要性")
-      - [具体实施时间](http://thinknotes.cn/2024/06/16/what-is-time/#%E5%85%B7%E4%BD%93%E5%AE%9E%E6%96%BD%E6%97%B6%E9%97%B4 "具体实施时间")
-      - [总结](http://thinknotes.cn/2024/06/16/what-is-time/#%E6%80%BB%E7%BB%93 "总结")
-  - [计算机上的时区设置对时间的影响](http://thinknotes.cn/2024/06/16/what-is-time/#%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%9A%84%E6%97%B6%E5%8C%BA%E8%AE%BE%E7%BD%AE%E5%AF%B9%E6%97%B6%E9%97%B4%E7%9A%84%E5%BD%B1%E5%93%8D "计算机上的时区设置对时间的影响")
-  - [中国唐朝时的时间](http://thinknotes.cn/2024/06/16/what-is-time/#%E4%B8%AD%E5%9B%BD%E5%94%90%E6%9C%9D%E6%97%B6%E7%9A%84%E6%97%B6%E9%97%B4 "中国唐朝时的时间")
-  - [参考资料](http://thinknotes.cn/2024/06/16/what-is-time/#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99 "参考资料")
+<span class="ez-toc-title-toggle">[<span class="ez-toc-js-icon-con"><span class=""><span class="eztoc-hide" style="display:none;">Toggle</span><span class="ez-toc-icon-toggle-span"><svg class="list-377408" fill="none" height="20px" style="fill: #999;color:#999" viewbox="0 0 24 24" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z" fill="currentColor"></path></svg><svg baseprofile="tiny" class="arrow-unsorted-368013" height="10px" style="fill: #999;color:#999" version="1.2" viewbox="0 0 24 24" width="10px" xmlns="http://www.w3.org/2000/svg"><path d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z"></path></svg></span></span></span>](#)</span></div><nav>- [什么是时间]
 
 </nav></div>## <span class="ez-toc-section" id="%E7%94%9F%E6%B4%BB%E5%9C%A8%E7%8E%B0%E4%BB%A3%E7%A4%BE%E4%BC%9A%E7%9A%84%E6%99%AE%E9%80%9A%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E6%97%B6%E9%97%B4"></span>生活在现代社会的普通人眼中的时间<span class="ez-toc-section-end"></span>
 
@@ -342,6 +307,6 @@ GMT时区系统的引入极大地促进了国际通信、交通和商业的便�
 - [时区\_百度百科](https://baike.baidu.com/item/%E6%97%B6%E5%8C%BA/491122)
 - [协调世界时 - MBA智库百科](https://wiki.mbalib.com/wiki/%E5%8D%8F%E8%B0%83%E4%B8%96%E7%95%8C%E6%97%B6)
 - [UTC 现在确切的时间](https://ww2.24timezones.com/shiqu/utc)
-- [UTC - 世界时间的标准 - 时区冷知识 - 时区大全](http://www.timeofdate.com/articles/posts/about-utc.html)
+- UTC - 世界时间的标准 - 时区冷知识 - 时区大全 http://www.timeofdate.com/articles/posts/about-utc.html
 - 《给孩子讲人类文明简史（全8册）》
-- 《寻找时间转折点》![](http://thinknotes.cn/wp-content/uploads/2024/06/image-20240615172555415-300x210.png)
+- 《寻找时间转折点》
